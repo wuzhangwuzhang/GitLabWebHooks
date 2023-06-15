@@ -78,4 +78,5 @@ def main():
     feishu_xlsx2lua.set_at_users("gull","linych").send("he he")
 
 if __name__ == '__main__':
-    robot = FeiShu("SLPKBugRobotTest")
+    #robot = FeiShu("SLPKBugRobotTest")
+    robot = FeiShu("SLPKBuildRobot")

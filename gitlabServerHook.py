@@ -25,12 +25,18 @@ def string_builder(cSharpFilesDic):
 飞书通知
 '''
 def notify2Develop(user, issueMsg):
-    notify.FeiShu("SLPKBugRobotTest").set_at_users(user).send(issueMsg)
+    #notify.FeiShu("SLPKBugRobotTest").set_at_users(user).send(issueMsg)
+    notify.FeiShu("SLPKBuildRobot").set_at_users(user).send(issueMsg)
 
 
+#cs 文件检查目录
 PATH_PATTERNS = [
     'Client/Assets/Scripts',
     'Assets/External',
+    'Packages/com.yoozoo.owl.rendering.hrp',
+    'Packages/com.yoozoo.managers.network',
+    'Packages/com.yoozoo.owl.rendering.hrp',
+    'Packages/resourcemanagerv2'
 ]
 
 
@@ -119,7 +125,8 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
             # print(f"mergeUrl:{mergeUrl}")
             notifyMsg = getMergeInfo(mergeUrl)
             if notifyMsg != "":
-                notify2Develop('看门狗', notifyMsg)
+                #notify2Develop('看门狗', notifyMsg)
+                notify2Develop('丝路助手', notifyMsg)
         else:
             branchName = input_data['ref']
             if branchName.__contains__('dev') or branchName.__contains__('master'):
