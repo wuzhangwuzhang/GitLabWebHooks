@@ -33,6 +33,7 @@ def notify2Develop(user, issueMsg):
 PATH_PATTERNS = [
     'Client/Assets/Scripts',
     'Assets/External',
+    'Assets/Wwise',
     'Packages/com.yoozoo.owl.rendering.hrp',
     'Packages/com.yoozoo.managers.network',
     'Packages/com.yoozoo.owl.rendering.hrp',
