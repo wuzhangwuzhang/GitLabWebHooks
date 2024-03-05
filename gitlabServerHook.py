@@ -37,7 +37,8 @@ PATH_PATTERNS = [
     'Packages/com.yoozoo.owl.rendering.hrp',
     'Packages/com.yoozoo.managers.network',
     'Packages/com.yoozoo.owl.rendering.hrp',
-    'Packages/resourcemanagerv2'
+    'Packages/resourcemanagerv2',
+    'Packages/com.yoozoo.managers.network'
 ]
 
 
