@@ -25,7 +25,7 @@ def string_builder(cSharpFilesDic):
 飞书通知
 '''
 def notify2Develop(user, issueMsg):
-    #notify.FeiShu("SLPKBugRobotTest").set_at_users(user).send(issueMsg)
+    #notify.FeiShu("SLPKBugRobotTest").set_at_users(user).send(issueMsg)   #10.18.41.29使用
     notify.FeiShu("SLPKBuildRobot").set_at_users(user).send(issueMsg)
 
 
@@ -53,10 +53,9 @@ def getMergeInfo(mrs_url):
         print("Could not find merge request ID in URL")
         sys.exit(1)
 
-    # 4W_mcvajgeqWFAT55XWG gotClient
     # ojhB2Cm3yuKy_76-wFu9 slpk
-    gl = gitlab.Gitlab(url='https://gitlab.uuzu.com/', private_token='ojhB2Cm3yuKy_76-wFu9',
-                       http_username='zhwu@uuzu.com', http_password="Wz147258")
+    # c8FPj6ZuHSsgaL1dgxyp gitlab_workspace  #10.18.41.29使用
+    gl = gitlab.Gitlab(url='https://gitlab.uuzu.com/', private_token='c8FPj6ZuHSsgaL1dgxyp',http_username='', http_password='')
     gl.auth()  # 安全认证
     project = gl.projects.get(3325)  # 项目的id '3325'   gotClient projectId：2183
 
@@ -127,8 +126,8 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
             # print(f"mergeUrl:{mergeUrl}")
             notifyMsg = getMergeInfo(mergeUrl)
             if notifyMsg != "":
-                #notify2Develop('看门狗', notifyMsg)
-                notify2Develop('丝路助手', notifyMsg)
+                #notify2Develop('看门狗', notifyMsg)    #10.18.41.29使用
+                notify2Develop('丝路助手', notifyMsg)   #测试
         else:
             branchName = input_data['ref']
             if branchName.__contains__('dev') or branchName.__contains__('master'):

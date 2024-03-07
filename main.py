@@ -1,7 +1,7 @@
 import socketserver
 from gitlabServerHook import MyHandler
 
-IP = "172.20.16.21"
+IP = "172.20.16.70"
 PORT = 13140
 
 # Press the green button in the gutter to run the script.
